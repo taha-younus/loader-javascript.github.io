@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.spinner {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 6px solid rgba(126, 126, 126, 0.534);
+  border-top-color: #007AFF; /* Change color as needed */
+  animation: spin .5s linear infinite;
+  margin: 23% auto;
+  display: none;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}    </style>
+</head>
+<body onload="show()">
+    <a href="" style="margin:10px auto;">Hy</a>
+    
+    <div class="spinner" id="loader"></div>
+    <script>
+        myLoader = document.getElementById('loader');
+
+        function show(){
+            myLoader.style.display = "block";
+        }
+
+        setInterval(
+            () => {
+                myLoader.style.display = "none";
+            },2000
+        )
+
+        function hide(){
+            myLoader.style.visibility = "hidden"
+        }
+        
+    </script>
+</body>
+</html>
